@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct BasicButton: View {
-    var body: some View {
+public struct BasicButton: View {
+    public var body: some View {
         Button(action: {
             print("tap button")
         }, label: {
