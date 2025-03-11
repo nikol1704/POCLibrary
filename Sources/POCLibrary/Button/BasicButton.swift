@@ -8,16 +8,22 @@
 import SwiftUI
 
 public struct BasicButton: View {
+    let title: String
+
+    public init(title: String) {
+        self.title = title
+    }
+
     public var body: some View {
         Button(action: {
             print("tap button")
         }, label: {
-            Text("Button")
+            Text(title)
         })
         
     }
 }
 
 #Preview {
-    BasicButton()
+    BasicButton(title: "Button")
 }
