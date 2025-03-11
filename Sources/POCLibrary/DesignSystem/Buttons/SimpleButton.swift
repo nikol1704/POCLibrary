@@ -2,12 +2,12 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by Nikol on 10/03/25.
+//  Created by Nikol on 11/03/25.
 //
 
 import SwiftUI
 
-public struct BasicButton: View {
+public struct SimpleButton: View {
     let title: String
 
     public init(title: String) {
@@ -16,14 +16,15 @@ public struct BasicButton: View {
 
     public var body: some View {
         Button(action: {
-            print("tap button")
+            print("mostrar button")
         }, label: {
             Text(title)
         })
-        
+        .foregroundStyle(Color.primary1)
+        .font(Fonts.Heading.h2)
     }
 }
 
 #Preview {
-    BasicButton(title: "Button")
+    SimpleButton(title: "Button")
 }
